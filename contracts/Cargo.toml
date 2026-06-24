@@ -144,6 +144,9 @@ members = [
     "referral-quests",
     "rank-rewards",
     "lobby-escrow",
+    "squad-rewards",
+    "reward-bridges",
+    "arena-passes",
 ]
 
 exclude = [

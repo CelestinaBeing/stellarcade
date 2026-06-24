@@ -148,6 +148,8 @@ members = [
     "reward-bridges",
     "arena-passes",
     "voucher-escrow",
+    "prize-ledger-v2",
+    "tournament-gates",
 ]
 
 exclude = [

@@ -498,3 +498,20 @@ export type {
   GuidedActionFooterProps,
   GuidedAction,
 } from "./GuidedActionFooter";
+
+// Issue #942
+export { AccessibleDropdown, default as AccessibleDropdownDefault } from "./AccessibleDropdown";
+export type { AccessibleDropdownProps, DropdownOption } from "./AccessibleDropdown";
+
+// Issue #941
+export { BadgeCarousel, default as BadgeCarouselDefault } from "./BadgeCarousel";
+export type { BadgeCarouselProps, ProfileBadge } from "./BadgeCarousel";
+
+// Issue #936
+export { SettingsPanel, default as SettingsPanelDefault } from "./SettingsPanel";
+export type { SettingsPanelProps } from "./SettingsPanel";
+
+// Issue #935
+export { Tooltip, default as TooltipDefault } from "./Tooltip";
+export type { TooltipProps } from "./Tooltip";
+

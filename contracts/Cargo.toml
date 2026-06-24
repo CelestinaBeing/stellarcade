@@ -147,6 +147,7 @@ members = [
     "squad-rewards",
     "reward-bridges",
     "arena-passes",
+    "voucher-escrow",
 ]
 
 exclude = [

@@ -547,3 +547,38 @@ export type { UserActivityTimelineProps, UserActivity, ActivityType } from "./Us
 export { CopyableWalletKeyField, default as CopyableWalletKeyFieldDefault } from "./CopyableWalletKeyField";
 export type { CopyableWalletKeyFieldProps } from "./CopyableWalletKeyField";
 
+// Issues #926, #927, #929, #931
+export {
+  WalletTxHistoryDrawer,
+  default as WalletTxHistoryDrawerDefault,
+} from "./WalletTxHistoryDrawer";
+export type {
+  WalletTxHistoryDrawerProps,
+  WalletTxEntry,
+} from "./WalletTxHistoryDrawer";
+
+export {
+  TxPendingOverlay,
+  default as TxPendingOverlayDefault,
+} from "./TxPendingOverlay";
+export type { TxPendingOverlayProps } from "./TxPendingOverlay";
+
+export {
+  DashboardCardSkeleton,
+  default as DashboardCardSkeletonDefault,
+} from "./DashboardCardSkeleton";
+export type {
+  DashboardCardSkeletonProps,
+  DashboardCardSkeletonVariant,
+} from "./DashboardCardSkeleton";
+
+export {
+  InlineFieldError,
+  default as InlineFieldErrorDefault,
+  useFieldValidation,
+} from "./InlineFieldError";
+export type {
+  InlineFieldErrorProps,
+  FieldValidationState,
+} from "./InlineFieldError";
+

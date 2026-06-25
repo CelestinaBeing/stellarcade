@@ -3,21 +3,6 @@
 version = 4
 
 [[package]]
-name = "addr2line"
-version = "0.25.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b"
-dependencies = [
- "gimli",
-]
-
-[[package]]
-name = "adler2"
-version = "2.0.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa"
-
-[[package]]
 name = "ahash"
 version = "0.8.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -30,15 +15,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "aho-corasick"
-version = "1.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ddd31a130427c27518df266943a5308ed92d4b226cc639f5a8f1002816174301"
-dependencies = [
- "memchr",
-]
-
-[[package]]
 name = "android_system_properties"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -46,12 +22,6 @@ checksum = "819e7219dbd41043ac279b19830f2efc897156490d7fd6ea916720117ee66311"
 dependencies = [
  "libc",
 ]
-
-[[package]]
-name = "anyhow"
-version = "1.0.102"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f202df86484c868dbad7eaa557ef785d5c66295e41b460ef922eca0723b842c"
 
 [[package]]
 name = "arbitrary"
@@ -97,7 +67,7 @@ dependencies = [
  "ark-std",
  "derivative",
  "hashbrown 0.13.2",
- "itertools 0.10.5",
+ "itertools",
  "num-traits",
  "zeroize",
 ]
@@ -114,7 +84,7 @@ dependencies = [
  "ark-std",
  "derivative",
  "digest",
- "itertools 0.10.5",
+ "itertools",
  "num-bigint",
  "num-traits",
  "paste",
@@ -198,37 +168,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 
 [[package]]
-name = "backtrace"
-version = "0.3.76"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb531853791a215d7c62a30daf0dde835f381ab5de4589cfe7c649d2cbe92bd6"
-dependencies = [
- "addr2line",
- "cfg-if",
- "libc",
- "miniz_oxide",
- "object",
- "rustc-demangle",
- "windows-link",
-]
-
-[[package]]
 name = "base16ct"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4c7f02d4ea65f2c1853089ffd8d2787bdbc63de2f0d29dedbcf8ccdfa0ccd4cf"
-
-[[package]]
-name = "base32"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23ce669cd6c8588f79e15cf450314f9638f967fc5770ff1c7c1deb0925ea7cfa"
-
-[[package]]
-name = "base64"
-version = "0.13.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9e1b586273c5702936fe7b7d6896644d8be71e6314cfe09d3167c95f712589e8"
 
 [[package]]
 name = "base64"
@@ -241,12 +184,6 @@ name = "base64ct"
 version = "1.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06"
-
-[[package]]
-name = "bitflags"
-version = "2.11.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c4512299f36f043ab09a583e57bceb5a5aab7a73db1805848e8fef3c9e8c78b3"
 
 [[package]]
 name = "block-buffer"
@@ -376,16 +313,6 @@ dependencies = [
 
 [[package]]
 name = "ctor"
-version = "0.2.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32a2785755761f3ddc1492979ce1e48d2c00d09311c39e4466429188f3dd6501"
-dependencies = [
- "quote",
- "syn 2.0.117",
-]
-
-[[package]]
-name = "ctor"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67773048316103656a637612c4a62477603b777d91d9c62ff2290f9cde178fdb"
@@ -501,15 +428,6 @@ name = "data-encoding"
 version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d7a1e2f27636f116493b8b860f5546edb47c8d8f8ea73e1d2a20be88e28d1fea"
-
-[[package]]
-name = "deployment-scripts"
-version = "0.1.0"
-dependencies = [
- "serde",
- "serde_json",
- "tempfile",
-]
 
 [[package]]
 name = "der"
@@ -661,16 +579,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
-name = "errno"
-version = "0.3.14"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
-dependencies = [
- "libc",
- "windows-sys",
-]
-
-[[package]]
 name = "escape-bytes"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -681,19 +589,6 @@ name = "ethnum"
 version = "1.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "40404c3f5f511ec4da6fe866ddf6a717c309fdbb69fbbad7b0f3edab8f2e835f"
-
-[[package]]
-name = "exploit-prevention"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "fastrand"
-version = "2.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f1f227452a390804cdb637b74a86990f2a7d7ba4b7d5693aac9b4dd6defd8d6"
 
 [[package]]
 name = "ff"
@@ -724,12 +619,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3f9eec918d3f24069decb9af1554cad7c880e2da24a9afd88aca000531ab82c1"
 
 [[package]]
-name = "foldhash"
-version = "0.1.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d9c4f5dac5e15c24eb999c26181a6ca40b39fe946cbe4c263c7209467bc83af2"
-
-[[package]]
 name = "generic-array"
 version = "0.14.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -752,25 +641,6 @@ dependencies = [
  "wasi",
  "wasm-bindgen",
 ]
-
-[[package]]
-name = "getrandom"
-version = "0.4.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0de51e6874e94e7bf76d726fc5d13ba782deca734ff60d5bb2fb2607c7406555"
-dependencies = [
- "cfg-if",
- "libc",
- "r-efi",
- "wasip2",
- "wasip3",
-]
-
-[[package]]
-name = "gimli"
-version = "0.32.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e629b9b98ef3dd8afe6ca2bd0f89306cec16d43d907889945bc5d6687f2f13c7"
 
 [[package]]
 name = "group"
@@ -805,15 +675,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "43a3c133739dddd0d2990f9a4bdf8eb4b21ef50e4851ca85ab661199821d510e"
 dependencies = [
  "ahash",
-]
-
-[[package]]
-name = "hashbrown"
-version = "0.15.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9229cfe53dfd69f0609a49f65461bd93001ea1ef889cd5529dd176593f5338a1"
-dependencies = [
- "foldhash",
 ]
 
 [[package]]
@@ -887,12 +748,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "id-arena"
-version = "2.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3d3067d79b975e8844ca9eb072e16b31c3c1c36928edf9c6789548c524d0d954"
-
-[[package]]
 name = "ident_case"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -937,15 +792,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "itertools"
-version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1c173a5686ce8bfa551b3563d0c2170bf24ca44da99c7ca4bfdab5418c3fe57"
-dependencies = [
- "either",
-]
-
-[[package]]
 name = "itoa"
 version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -983,12 +829,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "leb128fmt"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09edd9e8b54e49e587e4f6295a7d29c3ea94d469cb40ab8ca70b288248a81db2"
-
-[[package]]
 name = "libc"
 version = "0.2.185"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -999,12 +839,6 @@ name = "libm"
 version = "0.2.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b6d2cec3eae94f9f509c767b45932f1ada8350c4bdb85af2fcab4a3c14807981"
-
-[[package]]
-name = "linux-raw-sys"
-version = "0.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32a66949e030da00e8c7d4434b251670a91556f4144941d37452769c25d58a53"
 
 [[package]]
 name = "log"
@@ -1028,15 +862,6 @@ name = "memchr"
 version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8ca58f447f06ed17d5fc4043ce1b10dd205e060fb3ce5b979b8ed8e59ff3f79"
-
-[[package]]
-name = "miniz_oxide"
-version = "0.8.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316"
-dependencies = [
- "adler2",
-]
 
 [[package]]
 name = "num-bigint"
@@ -1081,15 +906,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841"
 dependencies = [
  "autocfg",
-]
-
-[[package]]
-name = "object"
-version = "0.37.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe"
-dependencies = [
- "memchr",
 ]
 
 [[package]]
@@ -1179,12 +995,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "r-efi"
-version = "6.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8dcc9c7d52a811697d2151c701e0d08956f92b0e24136cf4cf27b57a6a0d9bf"
-
-[[package]]
 name = "rand"
 version = "0.8.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1211,7 +1021,7 @@ version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
- "getrandom 0.2.17",
+ "getrandom",
 ]
 
 [[package]]
@@ -1235,35 +1045,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "regex"
-version = "1.12.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276"
-dependencies = [
- "aho-corasick",
- "memchr",
- "regex-automata",
- "regex-syntax",
-]
-
-[[package]]
-name = "regex-automata"
-version = "0.4.14"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e1dd4122fc1595e8162618945476892eefca7b88c52820e74af6262213cae8f"
-dependencies = [
- "aho-corasick",
- "memchr",
- "regex-syntax",
-]
-
-[[package]]
-name = "regex-syntax"
-version = "0.8.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc897dd8d9e8bd1ed8cdad82b5966c3e0ecae09fb1907d58efaa013543185d0a"
-
-[[package]]
 name = "rfc6979"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1272,12 +1053,6 @@ dependencies = [
  "hmac",
  "subtle",
 ]
-
-[[package]]
-name = "rustc-demangle"
-version = "0.1.27"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b50b8869d9fc858ce7266cce0194bd74df58b9d0e3f6df3a9fc8eb470d95c09d"
 
 [[package]]
 name = "rustc_version"
@@ -1289,32 +1064,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "rustix"
-version = "1.1.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b6fe4565b9518b83ef4f91bb47ce29620ca828bd32cb7e408f0062e9930ba190"
-dependencies = [
- "bitflags",
- "errno",
- "libc",
- "linux-raw-sys",
- "windows-sys",
-]
-
-[[package]]
 name = "rustversion"
 version = "1.0.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d"
-
-[[package]]
-name = "same-file"
-version = "1.0.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "93fc1dc3aaa9bfed95e02e6eadabb4baf7e3078b0bd1b4d7b6b0b68378900502"
-dependencies = [
- "winapi-util",
-]
 
 [[package]]
 name = "schemars"
@@ -1419,7 +1172,7 @@ version = "3.18.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dd5414fad8e6907dbdd5bc441a50ae8d6e26151a03b1de04d89a5576de61d01f"
 dependencies = [
- "base64 0.22.1",
+ "base64",
  "chrono",
  "hex",
  "indexmap 1.9.3",
@@ -1490,45 +1243,14 @@ checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 
 [[package]]
 name = "soroban-builtin-sdk-macros"
-version = "21.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2f57a68ef8777e28e274de0f3a88ad9a5a41d9a2eb461b4dd800b086f0e83b80"
-dependencies = [
- "itertools 0.11.0",
- "proc-macro2",
- "quote",
- "syn 2.0.117",
-]
-
-[[package]]
-name = "soroban-builtin-sdk-macros"
 version = "25.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7192e3a5551a7aeee90d2110b11b615798e81951fd8c8293c87ea7f88b0168f5"
 dependencies = [
- "itertools 0.10.5",
+ "itertools",
  "proc-macro2",
  "quote",
  "syn 2.0.117",
-]
-
-[[package]]
-name = "soroban-env-common"
-version = "21.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2fd1c89463835fe6da996318156d39f424b4f167c725ec692e5a7a2d4e694b3d"
-dependencies = [
- "arbitrary",
- "crate-git-revision",
- "ethnum",
- "num-derive",
- "num-traits",
- "serde",
- "soroban-env-macros 21.2.1",
- "soroban-wasmi",
- "static_assertions",
- "stellar-xdr 21.2.0",
- "wasmparser 0.116.1",
 ]
 
 [[package]]
@@ -1543,21 +1265,11 @@ dependencies = [
  "num-derive",
  "num-traits",
  "serde",
- "soroban-env-macros 25.0.1",
+ "soroban-env-macros",
  "soroban-wasmi",
  "static_assertions",
- "stellar-xdr 25.0.0",
- "wasmparser 0.116.1",
-]
-
-[[package]]
-name = "soroban-env-guest"
-version = "21.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6bfb2536811045d5cd0c656a324cbe9ce4467eb734c7946b74410d90dea5d0ce"
-dependencies = [
- "soroban-env-common 21.2.1",
- "static_assertions",
+ "stellar-xdr",
+ "wasmparser",
 ]
 
 [[package]]
@@ -1566,41 +1278,8 @@ version = "25.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ea2334ba1cfe0a170ab744d96db0b4ca86934de9ff68187ceebc09dc342def55"
 dependencies = [
- "soroban-env-common 25.0.1",
+ "soroban-env-common",
  "static_assertions",
-]
-
-[[package]]
-name = "soroban-env-host"
-version = "21.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2b7a32c28f281c423189f1298960194f0e0fc4eeb72378028171e556d8cd6160"
-dependencies = [
- "backtrace",
- "curve25519-dalek",
- "ecdsa",
- "ed25519-dalek",
- "elliptic-curve",
- "generic-array",
- "getrandom 0.2.17",
- "hex-literal",
- "hmac",
- "k256",
- "num-derive",
- "num-integer",
- "num-traits",
- "p256",
- "rand",
- "rand_chacha",
- "sec1",
- "sha2",
- "sha3",
- "soroban-builtin-sdk-macros 21.2.1",
- "soroban-env-common 21.2.1",
- "soroban-wasmi",
- "static_assertions",
- "stellar-strkey 0.0.8",
- "wasmparser 0.116.1",
 ]
 
 [[package]]
@@ -1619,7 +1298,7 @@ dependencies = [
  "ed25519-dalek",
  "elliptic-curve",
  "generic-array",
- "getrandom 0.2.17",
+ "getrandom",
  "hex-literal",
  "hmac",
  "k256",
@@ -1632,27 +1311,12 @@ dependencies = [
  "sec1",
  "sha2",
  "sha3",
- "soroban-builtin-sdk-macros 25.0.1",
- "soroban-env-common 25.0.1",
+ "soroban-builtin-sdk-macros",
+ "soroban-env-common",
  "soroban-wasmi",
  "static_assertions",
  "stellar-strkey 0.0.13",
- "wasmparser 0.116.1",
-]
-
-[[package]]
-name = "soroban-env-macros"
-version = "21.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "242926fe5e0d922f12d3796cd7cd02dd824e5ef1caa088f45fce20b618309f64"
-dependencies = [
- "itertools 0.11.0",
- "proc-macro2",
- "quote",
- "serde",
- "serde_json",
- "stellar-xdr 21.2.0",
- "syn 2.0.117",
+ "wasmparser",
 ]
 
 [[package]]
@@ -1661,27 +1325,13 @@ version = "25.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a989167512e3592d455b1e204d703cfe578a36672a77ed2f9e6f7e1bbfd9cc5c"
 dependencies = [
- "itertools 0.10.5",
+ "itertools",
  "proc-macro2",
  "quote",
  "serde",
  "serde_json",
- "stellar-xdr 25.0.0",
+ "stellar-xdr",
  "syn 2.0.117",
-]
-
-[[package]]
-name = "soroban-ledger-snapshot"
-version = "21.7.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6edf92749fd8399b417192d301c11f710b9cdce15789a3d157785ea971576fa"
-dependencies = [
- "serde",
- "serde_json",
- "serde_with",
- "soroban-env-common 21.2.1",
- "soroban-env-host 21.2.1",
- "thiserror",
 ]
 
 [[package]]
@@ -1693,31 +1343,9 @@ dependencies = [
  "serde",
  "serde_json",
  "serde_with",
- "soroban-env-common 25.0.1",
- "soroban-env-host 25.0.1",
+ "soroban-env-common",
+ "soroban-env-host",
  "thiserror",
-]
-
-[[package]]
-name = "soroban-sdk"
-version = "21.7.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7dcdf04484af7cc731a7a48ad1d9f5f940370edeea84734434ceaf398a6b862e"
-dependencies = [
- "arbitrary",
- "bytes-lit",
- "ctor 0.2.9",
- "derive_arbitrary",
- "ed25519-dalek",
- "rand",
- "rustc_version",
- "serde",
- "serde_json",
- "soroban-env-guest 21.2.1",
- "soroban-env-host 21.2.1",
- "soroban-ledger-snapshot 21.7.7",
- "soroban-sdk-macros 21.7.7",
- "stellar-strkey 0.0.8",
 ]
 
 [[package]]
@@ -1729,39 +1357,19 @@ dependencies = [
  "arbitrary",
  "bytes-lit",
  "crate-git-revision",
- "ctor 0.5.0",
+ "ctor",
  "derive_arbitrary",
  "ed25519-dalek",
  "rand",
  "rustc_version",
  "serde",
  "serde_json",
- "soroban-env-guest 25.0.1",
- "soroban-env-host 25.0.1",
- "soroban-ledger-snapshot 25.3.1",
- "soroban-sdk-macros 25.3.1",
+ "soroban-env-guest",
+ "soroban-env-host",
+ "soroban-ledger-snapshot",
+ "soroban-sdk-macros",
  "stellar-strkey 0.0.16",
  "visibility",
-]
-
-[[package]]
-name = "soroban-sdk-macros"
-version = "21.7.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0974e413731aeff2443f2305b344578b3f1ffd18335a7ba0f0b5d2eb4e94c9ce"
-dependencies = [
- "crate-git-revision",
- "darling 0.20.11",
- "itertools 0.11.0",
- "proc-macro2",
- "quote",
- "rustc_version",
- "sha2",
- "soroban-env-common 21.2.1",
- "soroban-spec 21.7.7",
- "soroban-spec-rust 21.7.7",
- "stellar-xdr 21.2.0",
- "syn 2.0.117",
 ]
 
 [[package]]
@@ -1772,28 +1380,16 @@ checksum = "ca03e9cf61d241cb9afdd6ddf41f6c25698b3f566a875e7009ea799b89e2bf0a"
 dependencies = [
  "darling 0.20.11",
  "heck",
- "itertools 0.10.5",
+ "itertools",
  "macro-string",
  "proc-macro2",
  "quote",
  "sha2",
- "soroban-env-common 25.0.1",
- "soroban-spec 25.3.1",
- "soroban-spec-rust 25.3.1",
- "stellar-xdr 25.0.0",
+ "soroban-env-common",
+ "soroban-spec",
+ "soroban-spec-rust",
+ "stellar-xdr",
  "syn 2.0.117",
-]
-
-[[package]]
-name = "soroban-spec"
-version = "21.7.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c2c70b20e68cae3ef700b8fa3ae29db1c6a294b311fba66918f90cb8f9fd0a1a"
-dependencies = [
- "base64 0.13.1",
- "stellar-xdr 21.2.0",
- "thiserror",
- "wasmparser 0.116.1",
 ]
 
 [[package]]
@@ -1802,27 +1398,11 @@ version = "25.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "aa02e07f507cc27406ae0834db4dcf309b78c4cc8776eb3b2d662d66e8859d25"
 dependencies = [
- "base64 0.22.1",
+ "base64",
  "sha2",
- "stellar-xdr 25.0.0",
+ "stellar-xdr",
  "thiserror",
- "wasmparser 0.116.1",
-]
-
-[[package]]
-name = "soroban-spec-rust"
-version = "21.7.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2dafbde981b141b191c6c036abc86097070ddd6eaaa33b273701449501e43d3"
-dependencies = [
- "prettyplease",
- "proc-macro2",
- "quote",
- "sha2",
- "soroban-spec 21.7.7",
- "stellar-xdr 21.2.0",
- "syn 2.0.117",
- "thiserror",
+ "wasmparser",
 ]
 
 [[package]]
@@ -1835,8 +1415,8 @@ dependencies = [
  "proc-macro2",
  "quote",
  "sha2",
- "soroban-spec 25.3.1",
- "stellar-xdr 25.0.0",
+ "soroban-spec",
+ "stellar-xdr",
  "syn 2.0.117",
  "thiserror",
 ]
@@ -1884,17 +1464,6 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 
 [[package]]
 name = "stellar-strkey"
-version = "0.0.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "12d2bf45e114117ea91d820a846fd1afbe3ba7d717988fee094ce8227a3bf8bd"
-dependencies = [
- "base32",
- "crate-git-revision",
- "thiserror",
-]
-
-[[package]]
-name = "stellar-strkey"
 version = "0.0.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ee1832fb50c651ad10f734aaf5d31ca5acdfb197a6ecda64d93fcdb8885af913"
@@ -1916,28 +1485,12 @@ dependencies = [
 
 [[package]]
 name = "stellar-xdr"
-version = "21.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2675a71212ed39a806e415b0dbf4702879ff288ec7f5ee996dda42a135512b50"
-dependencies = [
- "arbitrary",
- "base64 0.13.1",
- "crate-git-revision",
- "escape-bytes",
- "hex",
- "serde",
- "serde_with",
- "stellar-strkey 0.0.8",
-]
-
-[[package]]
-name = "stellar-xdr"
 version = "25.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "10d20dafed80076b227d4b17c0c508a4bbc4d5e4c3d4c1de7cd42242df4b1eaf"
 dependencies = [
  "arbitrary",
- "base64 0.22.1",
+ "base64",
  "cfg_eval",
  "crate-git-revision",
  "escape-bytes",
@@ -1950,956 +1503,31 @@ dependencies = [
 ]
 
 [[package]]
-name = "stellarcade-access-control"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-achievement-badge"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-affiliate-ledger"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-ai-generated-game"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-shared",
-]
-
-[[package]]
-name = "stellarcade-anti-cheat-bounties"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-arena-ladder"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-arena-sessions"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-asset-escrow-v3"
-version = "0.3.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-attendance-pass"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-badge-minter"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 21.7.7",
-]
-
-[[package]]
-name = "stellarcade-balance-management"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-bonus-rotator"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-bonus-vault"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-bounty-escrow"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-campaign-claims"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-clan-seasons"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-coin-flip"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-random-generator",
-]
-
-[[package]]
-name = "stellarcade-color-prediction"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-combo-rewards"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-comprehensive-test-suite"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-address-registry"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 21.7.7",
-]
-
-[[package]]
-name = "stellarcade-contract-circuit-breaker"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-doc-generator"
-version = "0.1.0"
-dependencies = [
- "regex",
- "serde",
- "serde_json",
- "tempfile",
- "walkdir",
-]
-
-[[package]]
-name = "stellarcade-contract-health-registry"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-interaction-library"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-metadata-registry"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-monitoring"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-role-registry"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-contract-upgrade-timelock"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-creator-drops"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-creator-escrow"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-creator-royalties"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-creator-vaults"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-cross-chain-bridge"
-version = "0.1.0"
-dependencies = [
- "ed25519-dalek",
- "rand",
- "soroban-sdk 25.3.1",
- "stellarcade-shared",
-]
-
-[[package]]
-name = "stellarcade-cross-contract-call-guard"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-cross-contract-handler"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-daily-challenges"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-daily-reward-emission"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-daily-trivia"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-dice-roll"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-random-generator",
-]
-
-[[package]]
-name = "stellarcade-duel-engine"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-dynamic-fee-policy"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-shared",
-]
-
-[[package]]
-name = "stellarcade-emergency-pause"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-epoch-scheduler"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-escrow-ledger"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-escrow-marketplace"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-escrow-vault"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-fanout-distributor"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-fee-allocator"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-fee-management"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-shared",
-]
-
-[[package]]
-name = "stellarcade-fee-shield"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-gas-optimization-analysis"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-governance"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-governance-token",
-]
-
-[[package]]
-name = "stellarcade-governance-token"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-grant-ledger"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-guild-progress"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-guild-season"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-identity-registry"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-jackpot-pool"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-ladder-checkpoints"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-ladder-seasons"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-leaderboard"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-shared",
-]
-
-[[package]]
-name = "stellarcade-lending-pool"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-lobby-escrow"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-lobby-gates"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-loot-crate"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-loot-rotation"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-map-voting"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-matchmaking-queue"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-mission-checkins"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-mission-ledger"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
 name = "stellarcade-mission-pass"
 version = "0.1.0"
 dependencies = [
- "soroban-sdk 25.3.1",
+ "soroban-sdk",
 ]
 
 [[package]]
-name = "stellarcade-multiplayer-room"
+name = "stellarcade-player-rating"
 version = "0.1.0"
 dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-nft-reward"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-number-guess"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
- "stellarcade-random-generator",
-]
-
-[[package]]
-name = "stellarcade-oracle-integration"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-pattern-puzzle"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-penalty-slashing"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-perk-claims"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-player-stamps"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-price-prediction"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-prize-pool"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
+ "soroban-sdk",
 ]
 
 [[package]]
 name = "stellarcade-prize-router-v2"
 version = "0.1.0"
 dependencies = [
- "soroban-sdk 25.3.1",
+ "soroban-sdk",
 ]
 
 [[package]]
 name = "stellarcade-prize-streamer"
 version = "0.1.0"
 dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-quest-redeemer"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-queue-rewards"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-raffle-engine"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-random-generator"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-rank-rewards"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-referral-quests"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-referral-rewards"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-referral-system"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-reserve-auction"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-reserve-manager"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-revenue-split"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-reward-distribution"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-reward-router"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 21.7.7",
-]
-
-[[package]]
-name = "stellarcade-reward-stream"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-reward-unlocker"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-reward-vesting"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-round-finalizer"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-round-vouchers"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-season-pass"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-season-rewards-vault"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 21.7.7",
-]
-
-[[package]]
-name = "stellarcade-session-nonce-manager"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-settlement-queue"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-shared"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-speed-trivia"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-sponsor-lockbox"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-sponsor-pool"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-sponsorship-ledger"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-squad-match"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-squad-roster"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-staking"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-staking-rewards"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-streak-bonus"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-streak-ladder"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-team-prizes"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-ticket-market"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-ticket-redeemer"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-tournament-lobby"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 21.7.7",
-]
-
-[[package]]
-name = "stellarcade-tournament-system"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-treasury"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-treasury-allocation"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-treasury-safeguard"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-trivia-game"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-upgrade-mechanism"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-vault-claims"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-vault-routing"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-vip-subscription"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-vote-escrow"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-voucher-minter"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-wallet-claims-v2"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
-]
-
-[[package]]
-name = "stellarcade-wordle-clone"
-version = "0.1.0"
-dependencies = [
- "soroban-sdk 25.3.1",
+ "soroban-sdk",
 ]
 
 [[package]]
@@ -2934,19 +1562,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "unicode-ident",
-]
-
-[[package]]
-name = "tempfile"
-version = "3.27.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd"
-dependencies = [
- "fastrand",
- "getrandom 0.4.2",
- "once_cell",
- "rustix",
- "windows-sys",
 ]
 
 [[package]]
@@ -3013,12 +1628,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
 
 [[package]]
-name = "unicode-xid"
-version = "0.2.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ebc1c04c71510c7f702b52b7c350734c9ff1295c464a03335b00bb84fc54f853"
-
-[[package]]
 name = "version_check"
 version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3036,38 +1645,10 @@ dependencies = [
 ]
 
 [[package]]
-name = "walkdir"
-version = "2.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "29790946404f91d9c5d06f9874efddea1dc06c5efe94541a7d6863108e3a5e4b"
-dependencies = [
- "same-file",
- "winapi-util",
-]
-
-[[package]]
 name = "wasi"
 version = "0.11.1+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
-
-[[package]]
-name = "wasip2"
-version = "1.0.3+wasi-0.2.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "20064672db26d7cdc89c7798c48a0fdfac8213434a1186e5ef29fd560ae223d6"
-dependencies = [
- "wit-bindgen 0.57.1",
-]
-
-[[package]]
-name = "wasip3"
-version = "0.4.0+wasi-0.3.0-rc-2026-01-06"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5428f8bf88ea5ddc08faddef2ac4a67e390b88186c703ce6dbd955e1c145aca5"
-dependencies = [
- "wit-bindgen 0.51.0",
-]
 
 [[package]]
 name = "wasm-bindgen"
@@ -3115,28 +1696,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "wasm-encoder"
-version = "0.244.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "990065f2fe63003fe337b932cfb5e3b80e0b4d0f5ff650e6985b1048f62c8319"
-dependencies = [
- "leb128fmt",
- "wasmparser 0.244.0",
-]
-
-[[package]]
-name = "wasm-metadata"
-version = "0.244.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb0e353e6a2fbdc176932bbaab493762eb1255a7900fe0fea1a2f96c296cc909"
-dependencies = [
- "anyhow",
- "indexmap 2.14.0",
- "wasm-encoder",
- "wasmparser 0.244.0",
-]
-
-[[package]]
 name = "wasmi_arena"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3165,33 +1724,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "wasmparser"
-version = "0.244.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "47b807c72e1bac69382b3a6fb3dbe8ea4c0ed87ff5629b8685ae6b9a611028fe"
-dependencies = [
- "bitflags",
- "hashbrown 0.15.5",
- "indexmap 2.14.0",
- "semver",
-]
-
-[[package]]
 name = "wasmparser-nostd"
 version = "0.100.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d5a015fe95f3504a94bb1462c717aae75253e39b9dd6c3fb1062c934535c64aa"
 dependencies = [
  "indexmap-nostd",
-]
-
-[[package]]
-name = "winapi-util"
-version = "0.1.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
-dependencies = [
- "windows-sys",
 ]
 
 [[package]]
@@ -3251,109 +1789,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7837d08f69c77cf6b07689544538e017c1bfcf57e34b4c0ff58e6c2cd3b37091"
 dependencies = [
  "windows-link",
-]
-
-[[package]]
-name = "windows-sys"
-version = "0.61.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc"
-dependencies = [
- "windows-link",
-]
-
-[[package]]
-name = "wit-bindgen"
-version = "0.51.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d7249219f66ced02969388cf2bb044a09756a083d0fab1e566056b04d9fbcaa5"
-dependencies = [
- "wit-bindgen-rust-macro",
-]
-
-[[package]]
-name = "wit-bindgen"
-version = "0.57.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e"
-
-[[package]]
-name = "wit-bindgen-core"
-version = "0.51.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ea61de684c3ea68cb082b7a88508a8b27fcc8b797d738bfc99a82facf1d752dc"
-dependencies = [
- "anyhow",
- "heck",
- "wit-parser",
-]
-
-[[package]]
-name = "wit-bindgen-rust"
-version = "0.51.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b7c566e0f4b284dd6561c786d9cb0142da491f46a9fbed79ea69cdad5db17f21"
-dependencies = [
- "anyhow",
- "heck",
- "indexmap 2.14.0",
- "prettyplease",
- "syn 2.0.117",
- "wasm-metadata",
- "wit-bindgen-core",
- "wit-component",
-]
-
-[[package]]
-name = "wit-bindgen-rust-macro"
-version = "0.51.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c0f9bfd77e6a48eccf51359e3ae77140a7f50b1e2ebfe62422d8afdaffab17a"
-dependencies = [
- "anyhow",
- "prettyplease",
- "proc-macro2",
- "quote",
- "syn 2.0.117",
- "wit-bindgen-core",
- "wit-bindgen-rust",
-]
-
-[[package]]
-name = "wit-component"
-version = "0.244.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9d66ea20e9553b30172b5e831994e35fbde2d165325bec84fc43dbf6f4eb9cb2"
-dependencies = [
- "anyhow",
- "bitflags",
- "indexmap 2.14.0",
- "log",
- "serde",
- "serde_derive",
- "serde_json",
- "wasm-encoder",
- "wasm-metadata",
- "wasmparser 0.244.0",
- "wit-parser",
-]
-
-[[package]]
-name = "wit-parser"
-version = "0.244.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ecc8ac4bc1dc3381b7f59c34f00b67e18f910c2c0f50015669dde7def656a736"
-dependencies = [
- "anyhow",
- "id-arena",
- "indexmap 2.14.0",
- "log",
- "semver",
- "serde",
- "serde_derive",
- "serde_json",
- "unicode-xid",
- "wasmparser 0.244.0",
 ]
 
 [[package]]

@@ -101,7 +101,6 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
 
   return (
     <button
-      // eslint-disable-next-line react/button-has-type
       type={type as 'button' | 'submit' | 'reset'}
       role="button"
       aria-label={resolvedAriaLabel}

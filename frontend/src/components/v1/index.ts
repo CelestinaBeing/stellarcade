@@ -531,3 +531,19 @@ export type { LeaderboardComparerProps, Player as LeaderboardPlayer, Metric as L
 export { FilterPillStrip, default as FilterPillStripDefault } from "./FilterPillStrip";
 export type { FilterPillStripProps, FilterPillOption } from "./FilterPillStrip";
 
+// Issue #974
+export { DashboardCardContainer, default as DashboardCardContainerDefault } from "./DashboardCardContainer";
+export type { DashboardCardContainerProps } from "./DashboardCardContainer";
+
+// Issue #975
+export { ConfirmationDialog, default as ConfirmationDialogDefault } from "./ConfirmationDialog";
+export type { ConfirmationDialogProps } from "./ConfirmationDialog";
+
+// Issue #976
+export { UserActivityTimeline, default as UserActivityTimelineDefault } from "./UserActivityTimeline";
+export type { UserActivityTimelineProps, UserActivity, ActivityType } from "./UserActivityTimeline";
+
+// Issue #977
+export { CopyableWalletKeyField, default as CopyableWalletKeyFieldDefault } from "./CopyableWalletKeyField";
+export type { CopyableWalletKeyFieldProps } from "./CopyableWalletKeyField";
+

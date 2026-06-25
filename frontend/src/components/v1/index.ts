@@ -515,3 +515,19 @@ export type { SettingsPanelProps } from "./SettingsPanel";
 export { Tooltip, default as TooltipDefault } from "./Tooltip";
 export type { TooltipProps } from "./Tooltip";
 
+// Issue #944
+export { QueueStatusOverlay, default as QueueStatusOverlayDefault } from "./QueueStatusOverlay";
+export type { QueueStatusOverlayProps } from "./QueueStatusOverlay";
+
+// Issue #943
+export { TextDivider, default as TextDividerDefault } from "./TextDivider";
+export type { TextDividerProps, TextDividerAlignment, TextDividerVariant, TextDividerThickness } from "./TextDivider";
+
+// Issue #930
+export { LeaderboardComparer, default as LeaderboardComparerDefault } from "./LeaderboardComparer";
+export type { LeaderboardComparerProps, Player as LeaderboardPlayer, Metric as LeaderboardMetric } from "./LeaderboardComparer";
+
+// Issue #925
+export { FilterPillStrip, default as FilterPillStripDefault } from "./FilterPillStrip";
+export type { FilterPillStripProps, FilterPillOption } from "./FilterPillStrip";
+
